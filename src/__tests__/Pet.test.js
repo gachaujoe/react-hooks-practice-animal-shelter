@@ -80,7 +80,7 @@ describe("Adopting a pet", () => {
   describe("Pet is not adopted yet", () => {
     test("only shows the adopt button", () => {
       render(<Pet pet={FEMALE_CAT} />);
-      expect(screen.queryByText(/Adopt pet/)).toBeInTheDocument();
+      expect(screen.getByText(/Adopt pet/)).toBeInTheDocument();
       expect(screen.queryByText(/Already adopted/)).not.toBeInTheDocument();
     });
 
